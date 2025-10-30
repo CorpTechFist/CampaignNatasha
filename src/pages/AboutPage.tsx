@@ -1,10 +1,10 @@
 import { Card } from '../components/ui/card';
 import { Heart, Users, Shield } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
-import aboutHeroImage from 'asset/5dc22cb875e1c6014fa82dc698be4a69e3394e35.png';
-import portraitImage from 'asset/e205e87eafe84b0099a7fed9ed3a56d21fa6a6c6.png';
-import newPortraitImage from 'asset/f10f1755d3173a16f2bf65025713d8f9960edc4e.png';
-import rightPortraitImage from 'asset/3e1f0e09123bfdadf36fd79df2530328202b86e7.png';
+import aboutHeroImage from '../assets/5dc22cb875e1c6014fa82dc698be4a69e3394e35.png';
+import portraitImage from '../assets/e205e87eafe84b0099a7fed9ed3a56d21fa6a6c6.png';
+import newPortraitImage from '../assets/f10f1755d3173a16f2bf65025713d8f9960edc4e.png';
+import rightPortraitImage from '../assets/3e1f0e09123bfdadf36fd79df2530328202b86e7.png';
 
 export function AboutPage() {
   return (

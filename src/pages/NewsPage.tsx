@@ -5,15 +5,15 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { PageHero } from '../components/PageHero';
 import { toast } from 'sonner@2.0.3';
-import motherDaughterPhoto from 'asset/3cdc57f76e563b1a56d1f3d7cfea8a68b20f652c.png';
-import newsHeroImage from 'asset/87156d5fb1da3fc0f53c8a6c13b16d33c94e9d96.png';
-import portraitImage from 'asset/ab14b1c56b56ad6c9dce42c83a1f31c2e97224fc.png';
-import newPortraitImage from 'asset/c47932e0dfcb02c73c03168800d50ec7d2cee20f.png';
-import rightPortraitImage from 'asset/32084f0389aae045ff6b7e8b70d86f3b575291b4.png';
-import transparentPortraitImage from 'asset/3e1f0e09123bfdadf36fd79df2530328202b86e7.png';
-import blueShirtPortrait from 'asset/d1e6d44981d06724c510398a10a709c2d9a52dc1.png';
-import newBannerPortrait from 'asset/9a8a32e1e07f40c83b2f93ec94fbe3ea1a7ed5c8.png';
-import blueShirtBannerPortrait from 'asset/6c247bc6e2b11a6aac572da6a4fe00f610739987.png';
+import motherDaughterPhoto from '../assets/3cdc57f76e563b1a56d1f3d7cfea8a68b20f652c.png';
+import newsHeroImage from '../assets/news-hero-image.png';
+import portraitImage from '../assets/ab14b1c56b56ad6c9dce42c83a1f31c2e97224fc.png';
+import newPortraitImage from '../assets/c47932e0dfcb02c73c03168800d50ec7d2cee20f.png';
+import rightPortraitImage from '../assets/32084f0389aae045ff6b7e8b70d86f3b575291b4.png';
+import transparentPortraitImage from '../assets/3e1f0e09123bfdadf36fd79df2530328202b86e7.png';
+import blueShirtPortrait from '../assets/d1e6d44981d06724c510398a10a709c2d9a52dc1.png';
+import newBannerPortrait from '../assets/9a8a32e1e07f40c83b2f93ec94fbe3ea1a7ed5c8.png';
+import blueShirtBannerPortrait from '../assets/6c247bc6e2b11a6aac572da6a4fe00f610739987.png';
 
 export function NewsPage() {
   const [email, setEmail] = useState('');

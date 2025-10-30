@@ -2,7 +2,9 @@ import { useNavigate } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { Button } from '../components/ui/button';
 import { ChevronRight, Heart, Users, Shield } from 'lucide-react';
-import natassjaPortrait from 'asset/4f0454f2a5404a6aa4c97c82035a13ac0ecc285d.png';
+import natassjaPortrait from '../assets/4f0454f2a5404a6aa4c97c82035a13ac0ecc285d.png';
+
+
  
 export function HomePage() {
   const navigate = useNavigate();

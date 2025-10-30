@@ -1,4 +1,4 @@
-import natassjaPortrait from 'asset/4f0454f2a5404a6aa4c97c82035a13ac0ecc285d.png';
+import natassjaPortrait from '../assets/4f0454f2a5404a6aa4c97c82035a13ac0ecc285d.png';
 
 interface PageHeroProps {
   title: string;

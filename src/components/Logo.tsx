@@ -1,4 +1,4 @@
-import logoImage from 'asset/d5f06d88b292c646654d009343286d6b655ec6c7.png';
+import logoImage from '../assets/d5f06d88b292c646654d009343286d6b655ec6c7.png';
 
 interface LogoProps {
   variant?: 'light' | 'dark';

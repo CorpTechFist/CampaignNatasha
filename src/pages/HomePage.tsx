@@ -256,29 +256,29 @@ export function HomePage() {
                     Volunteer Today
                   </Button>
                   <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="text-white border-white border-2 w-full"
-                    style={{
-                      borderColor: 'white', 
-                      borderWidth: '2px',
-                      backgroundColor: 'transparent',
-                      color: 'white'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'white';
-                      e.currentTarget.style.color = '#6B2E8C';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'transparent';
-                      e.currentTarget.style.color = 'white';
-                    }}
-                    onClick={() => {
-                      window.open('https://secure.actblue.com/donate/natassja-grossman-1', '_blank', 'noopener,noreferrer');
-                    }}
-                  >
-                    Donate Now
-                  </Button>
+  size="lg" 
+  variant="outline" 
+  className="w-full border-2"
+  style={{
+    borderColor: '#6B2E8C', 
+    color: '#6B2E8C',
+    backgroundColor: 'transparent'
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = '#6B2E8C';
+    e.currentTarget.style.color = 'white';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = 'transparent';
+    e.currentTarget.style.color = '#6B2E8C';
+  }}
+  onClick={() => {
+    window.open('https://secure.actblue.com/donate/natassja-grossman-1', '_blank', 'noopener,noreferrer');
+  }}
+>
+  Donate Now
+</Button>
+
                 </div>
               </div>
             </div>

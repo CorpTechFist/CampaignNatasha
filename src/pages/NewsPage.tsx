@@ -246,14 +246,16 @@ export function NewsPage() {
                 Get the latest campaign updates, event invitations, and news directly in your inbox.
               </p>
               <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 rounded-lg border-0 focus:ring-2 focus:ring-white"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
+       <input 
+  type="email" 
+  placeholder="Enter your email"
+  className="flex-1 px-4 py-2 rounded-lg border border-white border-opacity-40 bg-transparent text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-white"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  required
+/>
+
+
                 <button 
                   type="submit"
                   className="px-6 py-2 rounded-lg transition-colors"

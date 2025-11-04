@@ -20,6 +20,18 @@ function ScrollToTopAndListen() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
+  // ✅ Smooth scroll to a section if hash exists (like #contact)
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 300); // tiny delay to ensure the element is mounted
+      }
+    }
+  }, [location]);
+
   // Listen for custom navigation events (e.g. from volunteer link)
   useEffect(() => {
     const handleCustomNavigation = (event: CustomEvent) => {

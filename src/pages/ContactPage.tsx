@@ -8,21 +8,22 @@ import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
 import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
-
+import { useLocation } from 'react-router-dom';
 
 export function ContactPage() {
+  const location = useLocation();
+
   const [formData, setFormData] = useState({
     firstName: '',
-    lastName: '',
     email: '',
     phone: '',
     subject: '',
     message: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Replace with your EmailJS IDs
-  
   const SERVICE_ID = 'service_7vvgtse';
   const TEMPLATE_ID = 'template_qbniem2';
   const PUBLIC_KEY = 'zUpnf7tygd8DbNcQN';
@@ -37,11 +38,12 @@ export function ContactPage() {
         TEMPLATE_ID,
         {
           firstName: formData.firstName,
-          lastName: formData.lastName,
           email: formData.email,
           phone: formData.phone,
           subject: formData.subject,
           message: formData.message,
+          time: new Date().toLocaleString(),
+          sourcePage: location.state?.source || "Contact Page",
         },
         PUBLIC_KEY
       );
@@ -51,7 +53,6 @@ export function ContactPage() {
       // Reset form
       setFormData({
         firstName: '',
-        lastName: '',
         email: '',
         phone: '',
         subject: '',
@@ -89,27 +90,15 @@ export function ContactPage() {
             <Card className="p-8">
               <h3 className="text-2xl mb-6 text-gray-900">Send a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input 
-                      id="firstName" 
-                      placeholder="Your first name" 
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input 
-                      id="lastName" 
-                      placeholder="Your last name"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
+                <div>
+                  <Label htmlFor="firstName">Name</Label>
+                  <Input 
+                    id="firstName" 
+                    placeholder="Your name" 
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div>
                   <Label htmlFor="email">Email</Label>

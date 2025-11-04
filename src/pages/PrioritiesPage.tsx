@@ -2,8 +2,11 @@ import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Home, GraduationCap, Heart, Shield, DollarSign, Users, Leaf, Scale } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
+import { useNavigate } from "react-router-dom";
 
 export function PrioritiesPage() {
+  const navigate = useNavigate(); // ✅ moved inside the component
+
   const priorities = [
     {
       id: 1,
@@ -120,144 +123,128 @@ export function PrioritiesPage() {
   return (
     <>
       <PageHero title="Priorities" />
-      <section className="py-20" style={{backgroundColor: '#F8F9FA'}}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl mb-4 text-gray-900">My Priorities</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            As your representative, I will fight for policies that create opportunity, ensure dignity, and build stronger communities for all Utah families.
-          </p>
-        </div>
+      <section className="py-20" style={{ backgroundColor: '#F8F9FA' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl mb-4 text-gray-900">My Priorities</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              As your representative, I will fight for policies that create opportunity, ensure dignity, and build stronger communities for all Utah families.
+            </p>
+          </div>
 
-        {/* Featured Priorities */}
-        <div className="space-y-12 mb-16">
-          {featuredPriorities.map(priority => (
-            <Card key={priority.id} className="overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="p-10">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <priority.icon 
-                      className="h-16 w-16" 
-                      style={{color: priority.color}} 
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-4">
-                      <h3 className="text-3xl text-gray-900">{priority.title}</h3>
-                      <Badge 
-                        className="text-white"
-                        style={{backgroundColor: priority.color}}
-                      >
-                        Priority
-                      </Badge>
+          {/* Featured Priorities */}
+          <div className="space-y-12 mb-16">
+            {featuredPriorities.map(priority => (
+              <Card key={priority.id} className="overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="p-10">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <priority.icon className="h-16 w-16" style={{ color: priority.color }} />
                     </div>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                      {priority.description}
-                    </p>
-                    <div className="space-y-3">
-                      <h4 className="text-lg text-gray-900">Key Policy Goals:</h4>
-                      <ul className="space-y-2">
-                        {priority.policies.map((policy, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <div 
-                              className="w-2 h-2 rounded-full mt-3 flex-shrink-0" 
-                              style={{backgroundColor: priority.color}}
-                            />
-                            <span className="text-gray-700 leading-relaxed">{policy}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-4 mb-4">
+                        <h3 className="text-3xl text-gray-900">{priority.title}</h3>
+                        <Badge className="text-white" style={{ backgroundColor: priority.color }}>
+                          Priority
+                        </Badge>
+                      </div>
+                      <p className="text-lg text-gray-700 leading-relaxed mb-6">{priority.description}</p>
+                      <div className="space-y-3">
+                        <h4 className="text-lg text-gray-900">Key Policy Goals:</h4>
+                        <ul className="space-y-2">
+                          {priority.policies.map((policy, index) => (
+                            <li key={index} className="flex items-start gap-3">
+                              <div className="w-2 h-2 rounded-full mt-3 flex-shrink-0" style={{ backgroundColor: priority.color }} />
+                              <span className="text-gray-700 leading-relaxed">{policy}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Other Priorities Grid */}
-        <div className="mb-16">
-          <h3 className="text-2xl mb-8 text-center text-gray-900">Additional Priorities</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {otherPriorities.map(priority => (
-              <Card key={priority.id} className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <priority.icon 
-                    className="h-12 w-12 flex-shrink-0" 
-                    style={{color: priority.color}} 
-                  />
-                  <div className="flex-1">
-                    <h4 className="text-xl mb-3 text-gray-900">{priority.title}</h4>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      {priority.description}
-                    </p>
-                    <details className="group">
-                      <summary 
-                        className="cursor-pointer list-none transition-colors"
-                        style={{color: priority.color}}
-                      >
-                        <span className="group-open:hidden">View Policy Goals →</span>
-                        <span className="hidden group-open:inline">Hide Policy Goals ↑</span>
-                      </summary>
-                      <ul className="mt-4 space-y-2">
-                        {priority.policies.map((policy, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <div 
-                              className="w-2 h-2 rounded-full mt-2 flex-shrink-0" 
-                              style={{backgroundColor: priority.color}}
-                            />
-                            <span className="text-sm text-gray-700 leading-relaxed">{policy}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </details>
                   </div>
                 </div>
               </Card>
             ))}
           </div>
-        </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <Card className="p-8" style={{backgroundColor: '#4A1A5C'}}>
-            <h3 className="text-2xl mb-4 text-white">Have Questions About My Positions?</h3>
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-              I believe in transparent governance and want to hear from you. Reach out with questions about my policy positions or to share your own priorities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="px-8 py-3 rounded-lg transition-colors"
-                style={{backgroundColor: 'white', color: '#4A1A5C'}}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#F3F4F6';
-                  e.currentTarget.style.color = '#6B2E8C';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'white';
-                  e.currentTarget.style.color = '#4A1A5C';
-                }}
-              >
-                Contact Me
-              </button>
-              <button 
-                className="px-8 py-3 rounded-lg border-2 border-white text-white transition-colors"
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'white';
-                  e.currentTarget.style.color = '#4A1A5C';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = 'white';
-                }}
-              >
-                Schedule a Meeting
-              </button>
+          {/* Other Priorities Grid */}
+          <div className="mb-16">
+            <h3 className="text-2xl mb-8 text-center text-gray-900">Additional Priorities</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {otherPriorities.map(priority => (
+                <Card key={priority.id} className="p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex items-start gap-4">
+                    <priority.icon className="h-12 w-12 flex-shrink-0" style={{ color: priority.color }} />
+                    <div className="flex-1">
+                      <h4 className="text-xl mb-3 text-gray-900">{priority.title}</h4>
+                      <p className="text-gray-700 leading-relaxed mb-4">{priority.description}</p>
+                      <details className="group">
+                        <summary className="cursor-pointer list-none transition-colors" style={{ color: priority.color }}>
+                          <span className="group-open:hidden">View Policy Goals →</span>
+                          <span className="hidden group-open:inline">Hide Policy Goals ↑</span>
+                        </summary>
+                        <ul className="mt-4 space-y-2">
+                          {priority.policies.map((policy, index) => (
+                            <li key={index} className="flex items-start gap-3">
+                              <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: priority.color }} />
+                              <span className="text-sm text-gray-700 leading-relaxed">{policy}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    </div>
+                  </div>
+                </Card>
+              ))}
             </div>
-          </Card>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <Card className="p-8" style={{ backgroundColor: '#4A1A5C' }}>
+              <h3 className="text-2xl mb-4 text-white">Have Questions About My Positions?</h3>
+              <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
+                I believe in transparent governance and want to hear from you. Reach out with questions about my policy positions or to share your own priorities.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="px-8 py-3 rounded-lg transition-colors"
+                  style={{ backgroundColor: "white", color: "#4A1A5C" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#F3F4F6";
+                    e.currentTarget.style.color = "#6B2E8C";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "white";
+                    e.currentTarget.style.color = "#4A1A5C";
+                  }}
+                >
+                  Contact Me
+                </button>
+
+                <button
+                onClick={() => navigate("/contact", { state: { source: "Priorities Page - Schedule a Meeting" } })}
+
+
+  className="px-8 py-3 rounded-lg border-2 border-white text-white transition-colors"
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundColor = 'white';
+    e.currentTarget.style.color = '#4A1A5C';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundColor = 'transparent';
+    e.currentTarget.style.color = 'white';
+  }}
+>
+  Schedule a Meeting
+</button>
+
+              </div>
+            </Card>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }

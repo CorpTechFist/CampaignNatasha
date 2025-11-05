@@ -270,7 +270,7 @@ export function Layout({ children }: LayoutProps) {
 
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 space-y-4 md:space-y-0">
             <div>
-              <p>&copy; 2024 Natassja Grossman for Utah. All rights reserved.</p>
+              <p>&copy; 2025 Natassja Grossman for Utah. All rights reserved.</p>
               <p>
                 Website by{" "}
                 <a

@@ -108,7 +108,7 @@ export function NewsPage() {
         <div className="absolute inset-0">
           <img
             src={newsHeroImage}
-            alt="News Hero"
+            alt=""
             className="w-full h-full object-cover"
             style={{
               filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
@@ -158,7 +158,7 @@ export function NewsPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-gray-900">Campaign News</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Stay updated on our campaign progress, community events, and the
               issues that matter most to Utah families.
             </p>

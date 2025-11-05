@@ -95,7 +95,7 @@ export function HomePage() {
                 <div className="flex-1">
                   <h3 className="text-3xl mb-6 text-gray-900">My Promise</h3>
                   <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
-                    I promise to be a voice for families like mine. The people working hard, raising kids, and striving for stability in a system that often overlooks us. I will always lead with compassion, honesty, and courage, and I'll never forget who I'm here to serve: you.
+                    I promise to be a voice for families like mine. The people working hard, raising kids, and striving for stability in a system that often overlooks us. I will always lead with compassion, honesty, and courage, and I'll never forget who I'm here to serve you.
                   </p>
                 </div>
               </div>
@@ -172,10 +172,10 @@ export function HomePage() {
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
                 My mission is simple: to build a Utah where every person has the chance to live with safety, dignity, and opportunity.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 That means protecting the programs that help families get back on their feet, ensuring schools and healthcare are strong and accessible, and fighting for the rights of every community — women, immigrants, LGBTQ+ people, working families, and future generations.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 I believe government should work for people, not against them. And I believe that together, we can create a Utah that reflects our values of fairness, compassion, and resilience.
               </p>
             </div>

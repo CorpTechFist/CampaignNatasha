@@ -12,7 +12,7 @@ export function PrioritiesPage() {
       id: 1,
       title: "Housing Affordability",
       icon: Home,
-      color: "#A76BCF",
+      color: "#6B2E8C",
       description: "Everyone deserves a safe, affordable place to call home. Utah's housing crisis affects families across income levels, and we need bold solutions.",
       policies: [
         "Increase funding for affordable housing development",
@@ -40,7 +40,7 @@ export function PrioritiesPage() {
       id: 3,
       title: "Healthcare Access",
       icon: Heart,
-      color: "#8B4FAF",
+      color: "#6B2E8C",
       description: "Healthcare is a human right. We must ensure all Utahns can access quality, affordable medical care when they need it.",
       policies: [
         "Expand Medicaid to cover more working families",
@@ -54,7 +54,7 @@ export function PrioritiesPage() {
       id: 4,
       title: "LGBTQ+ Rights",
       icon: Shield,
-      color: "#A76BCF",
+      color: "#6B2E8C",
       description: "Every person deserves to live authentically and with dignity, protected from discrimination in all areas of life.",
       policies: [
         "Strengthen anti-discrimination protections",
@@ -80,7 +80,7 @@ export function PrioritiesPage() {
       id: 6,
       title: "Immigration Justice",
       icon: Users,
-      color: "#8B4FAF",
+      color: "#6B2E8C",
       description: "Immigrant families strengthen our communities. We must create policies that reflect our values of compassion and opportunity.",
       policies: [
         "Oppose cruel deportation policies",
@@ -93,7 +93,7 @@ export function PrioritiesPage() {
       id: 7,
       title: "Environmental Protection",
       icon: Leaf,
-      color: "#C7A2DC",
+      color: "#6B2E8C",
       description: "Utah's natural beauty is our shared heritage. We must protect our environment while building a sustainable economy.",
       policies: [
         "Transition to clean, renewable energy",
@@ -127,7 +127,7 @@ export function PrioritiesPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-gray-900">My Priorities</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               As your representative, I will fight for policies that create opportunity, ensure dignity, and build stronger communities for all Utah families.
             </p>
           </div>

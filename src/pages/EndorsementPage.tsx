@@ -30,7 +30,7 @@ export function EndorsementPage() {
       quote:
         "As a fellow working mom, I know Natassja will fight for policies that actually support families. She's authentic, determined, and has the experience to make real change happen.",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616c4120e95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export function EndorsementPage() {
       quote:
         "Natassja has stood with working families throughout her career as an organizer. She understands that strong unions and fair wages build stronger communities for everyone.",
       image:
-        "https://images.unsplash.com/photo-1556075798-4825dfaaf498?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://plus.unsplash.com/premium_photo-1683376198673-9068d05ffbf9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fEZhbWlsaWVzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900",
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ export function EndorsementPage() {
       quote:
         "Natassja has been fighting for immigrant rights and social justice long before she decided to run for office. Her advocacy is genuine and her commitment is unwavering.",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://plus.unsplash.com/premium_photo-1661580654226-e63a897fdc95?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTUwfHxidXNpbmVzcyUyMHdvbWFufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900",
     },
     {
       id: 5,
@@ -60,7 +60,7 @@ export function EndorsementPage() {
       quote:
         "Utah's natural beauty is our shared heritage. Natassja recognizes that environmental protection and economic opportunity go hand in hand, not in opposition.",
       image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW52aXJvbm1lbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900",
     },
     {
       id: 6,
@@ -85,13 +85,13 @@ export function EndorsementPage() {
       name: "Environmental Groups",
       count: 3,
       icon: Heart,
-      color: "#8B4FAF",
+      color: "#6B2E8C",
     },
     {
       name: "Education Advocates",
       count: 7,
       icon: Building,
-      color: "#A76BCF",
+      color: "#6B2E8C",
     },
   ];
 
@@ -102,7 +102,7 @@ export function EndorsementPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-gray-900">Endorsements</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Community leaders, organizations, and neighbors who believe in our
               vision for a more equitable Utah.
             </p>
@@ -159,14 +159,7 @@ export function EndorsementPage() {
                               {endorsement.title}
                             </p>
                           </div>
-                          {endorsement.type === "organization" && (
-                            <div
-                              className="px-3 py-1 rounded-full text-sm text-white"
-                              style={{ backgroundColor: "#6B2E8C" }}
-                            >
-                              Organization
-                            </div>
-                          )}
+                          
                         </div>
                       </div>
                     </div>

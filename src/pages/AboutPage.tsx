@@ -45,7 +45,7 @@ export function AboutPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-gray-900">About Me</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               I'm not a career politician. I'm a mom who's tired of seeing families like ours ignored.
             </p>
           </div>
@@ -55,7 +55,7 @@ export function AboutPage() {
             <div className="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <Heart className="h-16 w-16" style={{color: '#A76BCF'}} />
+                  <Heart className="h-16 w-16" style={{color: '#6B2E8C'}} />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-3xl mb-6 text-gray-900">My Promise</h3>
@@ -85,7 +85,7 @@ export function AboutPage() {
             <div className="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <Shield className="h-16 w-16" style={{color: '#8B4FAF'}} />
+                  <Shield className="h-16 w-16" style={{color: '#6B2E8C'}} />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-3xl mb-6 text-gray-900">My Fight for You</h3>
@@ -94,19 +94,19 @@ export function AboutPage() {
                   </p>
                   <div className="space-y-4 max-w-4xl">
                     <div className="flex items-start gap-4">
-                      <div className="w-2 h-2 rounded-full mt-3 flex-shrink-0" style={{backgroundColor: '#8B4FAF'}}></div>
+                      <div className="w-2 h-2 rounded-full mt-3 flex-shrink-0" style={{backgroundColor: '#6B2E8C'}}></div>
                       <p className="text-lg text-gray-700 leading-relaxed">
                         <strong className="text-gray-900">True Equality for Everyone:</strong> Building a Utah where your zip code, background, or who you love doesn't determine your future.
                       </p>
                     </div>
                     <div className="flex items-start gap-4">
-                      <div className="w-2 h-2 rounded-full mt-3 flex-shrink-0" style={{backgroundColor: '#8B4FAF'}}></div>
+                      <div className="w-2 h-2 rounded-full mt-3 flex-shrink-0" style={{backgroundColor: '#6B2E8C'}}></div>
                       <p className="text-lg text-gray-700 leading-relaxed">
                         <strong className="text-gray-900">Protecting Our Immigrant Neighbors:</strong> Standing up for hardworking families who make our communities stronger and deserve to feel safe and welcome.
                       </p>
                     </div>
                     <div className="flex items-start gap-4">
-                      <div className="w-2 h-2 rounded-full mt-3 flex-shrink-0" style={{backgroundColor: '#8B4FAF'}}></div>
+                      <div className="w-2 h-2 rounded-full mt-3 flex-shrink-0" style={{backgroundColor: '#6B2E8C'}}></div>
                       <p className="text-lg text-gray-700 leading-relaxed">
                         <strong className="text-gray-900">Defending LGBTQ+ Lives:</strong> Fighting for our children and neighbors to live authentically, with dignity and the full protection of the law.
                       </p>

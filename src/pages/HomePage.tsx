@@ -90,7 +90,7 @@ export function HomePage() {
             <div className="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <Heart className="h-16 w-16" style={{color: '#A76BCF'}} />
+                  <Heart className="h-16 w-16" style={{color: '#6B2E8C'}} />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-3xl mb-6 text-gray-900">My Promise</h3>
@@ -120,7 +120,7 @@ export function HomePage() {
             <div className="bg-white rounded-xl p-10 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0">
-                  <Shield className="h-16 w-16" style={{color: '#8B4FAF'}} />
+                  <Shield className="h-16 w-16" style={{color: '#6B2E8C'}} />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-3xl mb-6 text-gray-900">My Fight for You</h3>

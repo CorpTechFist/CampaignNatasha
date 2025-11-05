@@ -208,7 +208,7 @@ export function PrioritiesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => navigate("/contact")}
+                  onClick={() => navigate("/contact", { state: { source: "Priorities Page - Contact Me" } })}
                   className="px-8 py-3 rounded-lg transition-colors"
                   style={{ backgroundColor: "white", color: "#4A1A5C" }}
                   onMouseEnter={(e) => {

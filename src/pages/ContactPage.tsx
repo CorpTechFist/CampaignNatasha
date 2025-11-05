@@ -8,16 +8,24 @@ import { Mail, Phone, MapPin, Calendar } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
 import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export function ContactPage() {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const initialSubject =
+    location.state?.source === "Priorities Page - Schedule a Meeting"
+      ? "Priorities – Schedule a Meet"
+      : location.state?.source === "Volunteer Coordinator"
+      ? "Volunteer Coordinator"
+      : "";
 
   const [formData, setFormData] = useState({
     firstName: '',
     email: '',
     phone: '',
-    subject: '',
+    subject: initialSubject,
     message: ''
   });
 
@@ -43,7 +51,8 @@ export function ContactPage() {
           subject: formData.subject,
           message: formData.message,
           time: new Date().toLocaleString(),
-          sourcePage: location.state?.source || "Contact Page",
+          sourcePage:
+            location.state?.source || "Contact Page",
         },
         PUBLIC_KEY
       );
@@ -153,6 +162,34 @@ export function ContactPage() {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
+
+              {/* Contact Volunteer Coordinator Button */}
+              <Button 
+                size="lg"
+                variant="outline"
+                className="mt-6 border border-purple-700 w-full"
+                style={{
+                  backgroundColor: 'transparent',
+                  borderColor: '#6B2E8C',
+                  color: '#6B2E8C',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#6B2E8C';
+                  e.currentTarget.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#6B2E8C';
+                }}
+                onClick={() => {
+                  navigate('/contact', {
+                    state: { source: 'Volunteer Coordinator' },
+                  });
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                Contact Volunteer Coordinator
+              </Button>
             </Card>
 
             {/* Contact Info */}

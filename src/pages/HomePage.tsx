@@ -19,61 +19,122 @@ export function HomePage() {
   return (
     <>
       {/* Hero Section - Full width image with overlaid text */}
-      <section id="home" className="relative overflow-hidden w-screen" style={{height: '600px', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)'}}>
-        {/* Full-width portrait image background */}
-        <div className="absolute inset-0">
-          <img 
-            src={natassjaPortrait}
-            alt="Natassja Grossman - Candidate for Utah"
-            className="w-full h-full object-cover"
-            style={{
-              filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
-              objectPosition: 'center 0%'
-            }}
-          />
-          
-          {/* White overlay to brighten the top/hair area */}
-          <div className="absolute inset-0" style={{
-            background: 'radial-gradient(ellipse 800px 400px at 70% 20%, rgba(255, 255, 255, 0.25) 0%, transparent 60%)'
-          }}></div>
-          
-          {/* Gradient overlay for text readability - purple gradient */}
-          <div className="absolute inset-0" style={{
-            background: 'linear-gradient(to right, rgba(74, 26, 92, 0.90) 0%, rgba(74, 26, 92, 0.6) 40%, transparent 100%)'
-          }}></div>
-        </div>
-        
-        {/* Text content overlaid on image */}
-        <div className="relative h-full flex items-center">
-          <div className="px-6 sm:px-8 lg:px-16 xl:px-24 max-w-3xl">
-            <div className="space-y-6 text-white">
-              <div className="space-y-4">
-                <h1 className="lg:text-6xl leading-tight text-[96px]">
-                  A Voice for<br/>
-                  <span style={{color: '#4A1A5C'}}>Every Family</span>
-                </h1>
-                <p className="text-xl leading-relaxed max-w-lg text-purple-50">
-                  Single mom, community organizer, and fierce advocate for equity, freedom, and opportunity in Utah.
-                </p>
-              </div>
-              
-              <div className="pt-4">
-                <Button 
-                  size="lg" 
-                  className="text-white shadow-lg px-8 py-3"
-                  style={{backgroundColor: '#6B2E8C'}}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4A1A5C'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#6B2E8C'}
-                  onClick={() => scrollToSection('#about')}
-                >
-                  Learn My Story
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Hero Section - Full width image with overlaid text */}
+<section
+  id="home"
+  className="relative overflow-hidden w-screen"
+  style={{
+    height: '600px',
+    marginLeft: 'calc(-50vw + 50%)',
+    marginRight: 'calc(-50vw + 50%)',
+  }}
+>
+  {/* Full-width portrait image background */}
+  <div className="absolute inset-0">
+    <img
+      src={natassjaPortrait}
+      alt="Natassja Grossman - Candidate for Utah"
+      className="
+        w-full h-full object-cover
+        md:object-center
+        object-top
+        sm:block hidden
+      "
+      style={{
+        filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
+        objectPosition: 'center 0%',
+      }}
+    />
+
+    {/* On mobile, show a smaller/cropped image */}
+    <img
+      src={natassjaPortrait}
+      alt="Natassja Grossman - Candidate for Utah"
+      className="
+        w-full h-72 object-cover object-top
+        sm:hidden block
+      "
+      style={{
+        filter: 'brightness(1.1) saturate(1.05)',
+      }}
+    />
+
+    {/* White overlay to brighten the top/hair area */}
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          'radial-gradient(ellipse 800px 400px at 70% 20%, rgba(255, 255, 255, 0.25) 0%, transparent 60%)',
+      }}
+    ></div>
+
+    {/* Gradient overlay for text readability */}
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          'linear-gradient(to right, rgba(74, 26, 92, 0.90) 0%, rgba(74, 26, 92, 0.6) 40%, transparent 100%)',
+      }}
+    ></div>
+  </div>
+
+  {/* Text content overlaid on image */}
+<div className="relative h-full flex items-center justify-center lg:justify-start">
+  <div className="px-4 sm:px-8 lg:pl-24 xl:pl-32 max-w-none w-full lg:w-1/2">
+    <div className="space-y-4 sm:space-y-6 text-white text-left ml-[50px]">
+      <div className="space-y-3">
+        <h1
+          className="
+            leading-tight
+            text-5xl
+            sm:text-7xl
+            lg:text-[140px]
+            xl:text-[180px]
+            font-bold
+          "
+        >
+          A Voice for
+          <br />
+          <span style={{ color: 'rgb(74, 26, 92)' }}>Every Family</span>
+        </h1>
+
+        <p
+          className="
+            text-lg sm:text-2xl lg:text-[28px]
+            leading-snug lg:leading-normal
+            text-purple-50
+            max-w-2xl
+          "
+        >
+          Single mom, community organizer,<br />and fierce advocate
+          <br className="hidden sm:block" />
+          for equity, freedom, and opportunity in Utah.
+        </p>
+      </div>
+
+      <div className="pt-2 sm:pt-4">
+        <Button
+          size="lg"
+          className="text-white shadow-lg px-6 py-2 sm:px-8 sm:py-3"
+          style={{ backgroundColor: '#6B2E8C' }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundColor = '#4A1A5C')
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundColor = '#6B2E8C')
+          }
+          onClick={() => scrollToSection('#about')}
+        >
+          Learn My Story
+          <ChevronRight className="ml-2 h-5 w-5" />
+        </Button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
 
       {/* About Section */}
       <section id="about" className="py-20" style={{backgroundColor: '#F8F9FA'}}>

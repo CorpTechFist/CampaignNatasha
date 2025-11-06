@@ -45,10 +45,10 @@ export function NewsPage() {
   const newsItems = [
     {
       id: 1,
-      title: 'Natassja Launches Campaign for Utah Legislative Seat',
+      title: 'US Term Limit',
       excerpt:
-        'Single mom and community organizer announces bid to bring fresh perspective to Utah politics.',
-      date: 'October 5, 2024',
+        'Natassja signs Term Limit pledge on congress showing her dedication to a Congress for the people.',
+      fb: 'https://www.facebook.com/story.php?story_fbid=1065386179100770&id=100068881943313&rdid=XOi0rDngZE32zajG#',
       category: 'Campaign News',
       featured: true,
     },
@@ -179,7 +179,7 @@ export function NewsPage() {
                       />
                     </div>
                     <div className="md:w-2/3 p-8">
-                      <div className="flex items-center gap-4 mb-4">
+                      {/* <div className="flex items-center gap-4 mb-4">
                         <Badge
                           className="text-white"
                           style={{ backgroundColor: '#A76BCF' }}
@@ -195,7 +195,7 @@ export function NewsPage() {
                         >
                           {item.category}
                         </Badge>
-                      </div>
+                      </div> */}
                       <h3 className="text-2xl mb-4 text-gray-900">
                         {item.title}
                       </h3>
@@ -204,16 +204,31 @@ export function NewsPage() {
                       </p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 text-gray-600">
-                          <Calendar className="h-4 w-4" />
-                          <span>{item.date}</span>
-                        </div>
-                        <button
+  <a
+    href={item.fb}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-[#1877F2] transition-colors"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-5 w-5"
+    >
+      <path d="M22.675 0H1.325C.593 0 0 .594 0 1.326v21.348C0 23.406.593 24 1.325 24H12.82V14.708h-3.1v-3.62h3.1V8.414c0-3.066 1.873-4.737 4.606-4.737 1.31 0 2.436.097 2.762.141v3.203h-1.896c-1.488 0-1.776.707-1.776 1.744v2.286h3.55l-.463 3.62h-3.087V24h6.057C23.406 24 24 23.406 24 22.674V1.326C24 .594 23.406 0 22.675 0z" />
+    </svg>
+    <span>View on Facebook</span>
+  </a>
+</div>
+
+                        {/* <button
                           className="flex items-center gap-2 transition-colors"
                           style={{ color: '#6B2E8C' }}
                         >
                           Read More
                           <ArrowRight className="h-4 w-4" />
-                        </button>
+                        </button> */}
                       </div>
                     </div>
                   </div>
@@ -222,7 +237,7 @@ export function NewsPage() {
             ))}
 
           {/* Other News */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsItems
               .filter((item) => !item.featured)
               .map((item) => (
@@ -264,7 +279,7 @@ export function NewsPage() {
                   </div>
                 </Card>
               ))}
-          </div>
+          </div> */}
 
           {/* Newsletter Signup */}
           <div className="mt-16 text-center">

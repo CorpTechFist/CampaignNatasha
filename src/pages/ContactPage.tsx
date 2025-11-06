@@ -212,16 +212,16 @@ export function ContactPage() {
                 <p className="text-sm text-gray-500 mt-2">Campaign office hours: Mon-Fri 9AM-6PM</p>
               </Card>
 
-              <Card className="p-6">
+              {/* <Card className="p-6">
                 <div className="flex items-center mb-4">
                   <MapPin className="h-6 w-6 mr-3" style={{color: '#A76BCF'}} />
                   <h3 className="text-xl text-gray-900">Campaign Office</h3>
                 </div>
                 <p className="text-gray-600">123 Main Street<br />Provo, UT 84601</p>
                 <p className="text-sm text-gray-500 mt-2">Open for volunteers and visitors</p>
-              </Card>
+              </Card> */}
 
-              <Card className="p-6">
+              {/* <Card className="p-6">
                 <div className="flex items-center mb-4">
                   <Calendar className="h-6 w-6 mr-3" style={{color: '#6B2E8C'}} />
                   <h3 className="text-xl text-gray-900">Upcoming Events</h3>
@@ -238,7 +238,7 @@ export function ContactPage() {
                     <p className="text-sm text-gray-500">Local Coffee Shop</p>
                   </div>
                 </div>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>

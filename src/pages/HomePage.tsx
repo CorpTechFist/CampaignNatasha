@@ -293,12 +293,7 @@ export function HomePage() {
                 />
                 
                 {/* Overlay stats */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-center">
-                    <div className="text-3xl text-gray-900 mb-1">500+</div>
-                    <div className="text-sm text-gray-600">Volunteers</div>
-                  </div>
-                </div>
+                
                 
                 <div className="absolute -top-6 -left-6 bg-white rounded-xl p-6 shadow-xl border border-gray-100">
                   <div className="text-center">

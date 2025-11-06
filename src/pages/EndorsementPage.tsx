@@ -3,7 +3,8 @@ import { Quote, Users, Building, Heart } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { PageHero } from "../components/PageHero";
 import { useNavigate } from "react-router-dom";
-
+import greenwaveImage from "../assets/natassjaendorsement.png";
+import { FaInstagram } from 'react-icons/fa'; // 👈 Import Instagram icon
 export function EndorsementPage() {
   const navigate = useNavigate();
 
@@ -14,86 +15,66 @@ export function EndorsementPage() {
   const endorsements = [
     {
       id: 1,
-      name: "Utah Education Association",
+      name: "Greenwave Endorsement",
       type: "organization",
-      title: "Teachers Union",
+      title: "https://www.instagram.com/p/DOU9otrjB3s/",
       quote:
-        "Natassja understands the challenges facing our schools and has a clear vision for supporting both educators and students. Her commitment to public education and equity makes her the right choice for Utah families.",
-      image:
-        "https://images.unsplash.com/photo-1580582932707-520aed937b7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "Natassja is a champion for reproductive freedom, LGBTQ+ equality, and equity in education and healthcare. She has consistently shown her commitment to protecting the rights and dignity of every Utahn, especially those too often left out of the political conversation.",
+      image: greenwaveImage,
     },
-    {
-      id: 2,
-      name: "Sarah Mitchell",
-      type: "individual",
-      title: "Local Business Owner & Mother",
-      quote:
-        "As a fellow working mom, I know Natassja will fight for policies that actually support families. She's authentic, determined, and has the experience to make real change happen.",
-      image:
-        "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
-    },
-    {
-      id: 3,
-      name: "Utah AFL-CIO",
-      type: "organization",
-      title: "Labor Union Coalition",
-      quote:
-        "Natassja has stood with working families throughout her career as an organizer. She understands that strong unions and fair wages build stronger communities for everyone.",
-      image:
-        "https://plus.unsplash.com/premium_photo-1683376198673-9068d05ffbf9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fEZhbWlsaWVzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900",
-    },
-    {
-      id: 4,
-      name: "Maria Rodriguez",
-      type: "individual",
-      title: "Community Volunteer & Activist",
-      quote:
-        "Natassja has been fighting for immigrant rights and social justice long before she decided to run for office. Her advocacy is genuine and her commitment is unwavering.",
-      image:
-        "https://plus.unsplash.com/premium_photo-1661580654226-e63a897fdc95?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTUwfHxidXNpbmVzcyUyMHdvbWFufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900",
-    },
-    {
-      id: 5,
-      name: "Utah Environmental Coalition",
-      type: "organization",
-      title: "Environmental Advocacy Group",
-      quote:
-        "Utah's natural beauty is our shared heritage. Natassja recognizes that environmental protection and economic opportunity go hand in hand, not in opposition.",
-      image:
-        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW52aXJvbm1lbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900",
-    },
-    {
-      id: 6,
-      name: "David Chen",
-      type: "individual",
-      title: "Small Business Owner",
-      quote:
-        "Natassja understands that small businesses are the backbone of our economy. Her policies will help entrepreneurs like me while ensuring workers are treated fairly.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    },
+    // {
+    //   id: 2,
+    //   name: "Sarah Mitchell",
+    //   type: "individual",
+    //   title: "Local Business Owner & Mother",
+    //   quote:
+    //     "As a fellow working mom, I know Natassja will fight for policies that actually support families. She's authentic, determined, and has the experience to make real change happen.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
+    // },
+    // {
+    //   id: 3,
+    //   name: "Utah AFL-CIO",
+    //   type: "organization",
+    //   title: "Labor Union Coalition",
+    //   quote:
+    //     "Natassja has stood with working families throughout her career as an organizer. She understands that strong unions and fair wages build stronger communities for everyone.",
+    //   image:
+    //     "https://plus.unsplash.com/premium_photo-1683376198673-9068d05ffbf9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fEZhbWlsaWVzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900",
+    // },
+    // {
+    //   id: 4,
+    //   name: "Maria Rodriguez",
+    //   type: "individual",
+    //   title: "Community Volunteer & Activist",
+    //   quote:
+    //     "Natassja has been fighting for immigrant rights and social justice long before she decided to run for office. Her advocacy is genuine and her commitment is unwavering.",
+    //   image:
+    //     "https://plus.unsplash.com/premium_photo-1661580654226-e63a897fdc95?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTUwfHxidXNpbmVzcyUyMHdvbWFufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=900",
+    // },
+    // {
+    //   id: 5,
+    //   name: "Utah Environmental Coalition",
+    //   type: "organization",
+    //   title: "Environmental Advocacy Group",
+    //   quote:
+    //     "Utah's natural beauty is our shared heritage. Natassja recognizes that environmental protection and economic opportunity go hand in hand, not in opposition.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW52aXJvbm1lbnRhbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=900",
+    // },
+    // {
+    //   id: 6,
+    //   name: "David Chen",
+    //   type: "individual",
+    //   title: "Small Business Owner",
+    //   quote:
+    //     "Natassja understands that small businesses are the backbone of our economy. Her policies will help entrepreneurs like me while ensuring workers are treated fairly.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    // },
   ];
 
-  const categories = [
-    {
-      name: "Labor Organizations",
-      count: 5,
-      icon: Users,
-      color: "#6B2E8C",
-    },
-    {
-      name: "Environmental Groups",
-      count: 3,
-      icon: Heart,
-      color: "#6B2E8C",
-    },
-    {
-      name: "Education Advocates",
-      count: 7,
-      icon: Building,
-      color: "#6B2E8C",
-    },
-  ];
+
 
   return (
     <>
@@ -109,65 +90,63 @@ export function EndorsementPage() {
           </div>
 
           {/* Endorsement Categories */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {categories.map((category, index) => (
-              <Card
-                key={index}
-                className="p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <category.icon
-                  className="h-12 w-12 mx-auto mb-4"
-                  style={{ color: category.color }}
-                />
-                <h3 className="text-xl mb-2 text-gray-900">{category.name}</h3>
-                <p className="text-gray-600">{category.count} Endorsements</p>
-              </Card>
-            ))}
-          </div>
-
+          
           {/* Featured Endorsements */}
-          <div className="space-y-8">
-            {endorsements.map((endorsement) => (
-              <Card
-                key={endorsement.id}
-                className="overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="md:flex">
-                  <div className="md:w-1/4">
-                    <ImageWithFallback
-                      src={endorsement.image}
-                      alt={endorsement.name}
-                      className="w-full h-64 md:h-full object-cover"
-                    />
-                  </div>
-                  <div className="md:w-3/4 p-8">
-                    <div className="flex items-start gap-4">
-                      <Quote
-                        className="h-8 w-8 flex-shrink-0 mt-1"
-                        style={{ color: "#8B4FAF" }}
-                      />
-                      <div className="flex-1">
-                        <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
-                          "{endorsement.quote}"
-                        </blockquote>
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h4 className="text-lg text-gray-900">
-                              {endorsement.name}
-                            </h4>
-                            <p className="text-gray-600">
-                              {endorsement.title}
-                            </p>
-                          </div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <div className="space-y-8">
+  {endorsements.map((endorsement) => (
+    <Card
+      key={endorsement.id}
+      className="overflow-hidden hover:shadow-lg transition-shadow"
+    >
+      <div className="md:flex">
+        <div className="md:w-1/4">
+          <ImageWithFallback
+            src={endorsement.image}
+            alt={endorsement.name}
+            className="w-full h-64 md:h-full object-cover"
+          />
+        </div>
+
+        <div className="md:w-3/4 p-8">
+          <div className="flex items-start gap-4">
+            <Quote
+              className="h-8 w-8 flex-shrink-0 mt-1"
+              style={{ color: "#8B4FAF" }}
+            />
+
+            <div className="flex-1">
+              <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
+                "{endorsement.quote}"
+              </blockquote>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="text-lg text-gray-900">{endorsement.name}</h4>
+                  <p className="text-gray-600 capitalize">
+                    {endorsement.type}
+                  </p>
                 </div>
-              </Card>
-            ))}
+
+                {/* 👇 Instagram icon link */}
+               {endorsement.title && (
+  <a
+    href={endorsement.title}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors font-medium"
+  >
+    <FaInstagram size={20} />
+    <span>View on Instagram</span>
+  </a>
+)}
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </Card>
+  ))}
+</div>
 
           {/* Call to Action */}
           <div className="mt-16 text-center">

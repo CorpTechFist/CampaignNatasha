@@ -19,51 +19,51 @@ export function VolunteerPage() {
   const navigate = useNavigate();
 
   const volunteerRoles = [
-    {
-      id: 1,
-      title: "Phone Bank Volunteer",
-      icon: Phone,
-      color: "#6B2E8C",
-      timeCommitment: "2-4 hours/week",
-      description: "Connect with voters by phone to share Natassja's message and identify supporters.",
-      tasks: [
-        "Make voter contact calls from our campaign office",
-        "Follow provided scripts and talking points",
-        "Input voter data into our campaign database",
-        "No experience necessary - training provided"
-      ],
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Canvasser",
-      icon: MapPin,
-      color: "#6B2E8C",
-      timeCommitment: "3-5 hours/week",
-      description: "Go door-to-door in neighborhoods to talk with voters about Natassja's campaign.",
-      tasks: [
-        "Walk neighborhoods with campaign literature",
-        "Have brief, friendly conversations with voters",
-        "Record voter responses and feedback",
-        "Canvassing training and materials provided"
-      ],
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Event Organizer",
-      icon: Calendar,
-      color: "#6B2E8C",
-      timeCommitment: "5-8 hours/week",
-      description: "Help plan and execute campaign events, from house parties to community forums.",
-      tasks: [
-        "Coordinate venue logistics and setup",
-        "Manage event registration and attendance",
-        "Recruit and coordinate other volunteers",
-        "Help with post-event follow-up"
-      ],
-      featured: true
-    },
+    // {
+    //   id: 1,
+    //   title: "Phone Bank Volunteer",
+    //   icon: Phone,
+    //   color: "#6B2E8C",
+    //   timeCommitment: "2-4 hours/week",
+    //   description: "Connect with voters by phone to share Natassja's message and identify supporters.",
+    //   tasks: [
+    //     "Make voter contact calls from our campaign office",
+    //     "Follow provided scripts and talking points",
+    //     "Input voter data into our campaign database",
+    //     "No experience necessary - training provided"
+    //   ],
+    //   featured: true
+    // },
+    // {
+    //   id: 2,
+    //   title: "Canvasser",
+    //   icon: MapPin,
+    //   color: "#6B2E8C",
+    //   timeCommitment: "3-5 hours/week",
+    //   description: "Go door-to-door in neighborhoods to talk with voters about Natassja's campaign.",
+    //   tasks: [
+    //     "Walk neighborhoods with campaign literature",
+    //     "Have brief, friendly conversations with voters",
+    //     "Record voter responses and feedback",
+    //     "Canvassing training and materials provided"
+    //   ],
+    //   featured: true
+    // },
+    // {
+    //   id: 3,
+    //   title: "Event Organizer",
+    //   icon: Calendar,
+    //   color: "#6B2E8C",
+    //   timeCommitment: "5-8 hours/week",
+    //   description: "Help plan and execute campaign events, from house parties to community forums.",
+    //   tasks: [
+    //     "Coordinate venue logistics and setup",
+    //     "Manage event registration and attendance",
+    //     "Recruit and coordinate other volunteers",
+    //     "Help with post-event follow-up"
+    //   ],
+    //   featured: true
+    // },
     {
       id: 4,
       title: "Digital Organizer",
@@ -154,7 +154,7 @@ export function VolunteerPage() {
           </p>
         </div>
 {/* Impact Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-16">
+        {/* <div className="grid md:grid-cols-4 gap-6 mb-16">
           <Card className="p-6 text-center">
             <div className="text-3xl mb-2" style={{color: '#6B2E8C'}}>250+</div>
             <div className="text-gray-600">Active Volunteers</div>
@@ -171,10 +171,10 @@ export function VolunteerPage() {
             <div className="text-3xl mb-2" style={{color: '#6B2E8C'}}>45</div>
             <div className="text-gray-600">Events Hosted</div>
           </Card>
-        </div>
+        </div> */}
         {/* Featured Volunteer Roles */}
         <div className="mb-16">
-          <h3 className="text-2xl mb-8 text-center text-gray-900">High-Impact Volunteer Opportunities</h3>
+          {/* <h3 className="text-2xl mb-8 text-center text-gray-900">High-Impact Volunteer Opportunities</h3> */}
           <div className="space-y-8">
             {featuredRoles.map(role => (
               <Card key={role.id} className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -231,8 +231,8 @@ export function VolunteerPage() {
         </div>
  {/* Upcoming Events */}
         <div className="mb-16">
-          <h3 className="text-2xl mb-8 text-center text-gray-900">Upcoming Volunteer Events</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* <h3 className="text-2xl mb-8 text-center text-gray-900">Upcoming Volunteer Events</h3> */}
+          {/* <div className="grid md:grid-cols-2 gap-6">
             {upcomingEvents.map((event, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4">
@@ -267,7 +267,7 @@ export function VolunteerPage() {
                 </div>
               </Card>
             ))}
-          </div>
+          </div> */}
         </div>
         {/* Volunteer Sign Up */}
         <div className="text-center">

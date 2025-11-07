@@ -32,7 +32,7 @@ export function HomePage() {
   <style>{`
     /* Default: Mobile */
     #home {
-      height: 165px !important;
+      height: 158px !important;
     }
 
     /* Tablet and above (matches Tailwind sm breakpoint) */
@@ -73,7 +73,7 @@ export function HomePage() {
     alt="Natassja Grossman - Candidate for Utah"
     className="
       block sm:hidden
-      w-full h-[280px] object-cover object-top
+      w-full h-[160px] mt-4 object-cover object-top
     "
     style={{
       filter: 'brightness(1.05) saturate(1.05)',
@@ -148,6 +148,7 @@ export function HomePage() {
   {/* === Responsive Text Styling === */}
 <style>{`
   /* Default: Mobile */
+ 
   .hero-heading {
     font-weight: 700;
     line-height: 1.1;
@@ -157,7 +158,7 @@ export function HomePage() {
 
   .hero-subtext {
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.3;
     max-width: 240px; /* control width for natural wrapping */
     word-break: keep-all;
   }

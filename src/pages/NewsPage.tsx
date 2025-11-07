@@ -98,60 +98,89 @@ export function NewsPage() {
     <>
       {/* Hero Section */}
       <section
-        className="relative overflow-hidden w-screen"
-        style={{
-          height: '600px',
-          marginLeft: 'calc(-50vw + 50%)',
-          marginRight: 'calc(-50vw + 50%)',
-        }}
-      >
-        <div className="absolute inset-0">
-          <img
-            src={newsHeroImage}
-            alt=""
-            className="w-full h-full object-cover"
-            style={{
-              filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
-              objectPosition: 'center center',
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'linear-gradient(to right, rgba(74, 26, 92, 0.90) 0%, rgba(74, 26, 92, 0.6) 40%, transparent 100%)',
-            }}
-          ></div>
-        </div>
+  id="home"
+  className="relative overflow-hidden w-screen"
+  style={{
+    marginLeft: 'calc(-50vw + 50%)',
+    marginRight: 'calc(-50vw + 50%)',
+  }}
+>
+  {/* Responsive height */}
+  <style>{`
+  #home {
+    height: 280px !important; /* Mobile */
+    background-image: url(${rightPortraitImage});
+    background-repeat: no-repeat;
+    background-position: 70% 10%; /* adjust vertical framing */
+    background-size: 90%; /* ✅ zoomed OUT */
+    filter: brightness(1.1) saturate(1.05) contrast(1.05);
+  }
 
-        <div
-          className="relative h-full flex items-center justify-between"
-          style={{ zIndex: 20 }}
-        >
-          <div
-            className="relative px-6 sm:px-8 lg:px-16 xl:px-24 max-w-3xl"
-            style={{ zIndex: 2 }}
-          >
-            <div className="space-y-6 text-white">
-              <h1 className="lg:text-6xl leading-tight text-[96px]">News</h1>
-            </div>
-          </div>
+  @media (min-width: 640px) {
+    #home {
+      height: 520px !important; /* Tablet */
+      background-position: 70% 35%;
+      background-size: 85%; /* ✅ zoomed out more */
+    }
+  }
 
-          <img
-            src={blueShirtBannerPortrait}
-            alt="Natassja Grossman"
-            className="absolute h-full"
-            style={{
-              maxWidth: '850px',
-              zIndex: 10,
-              bottom: '0',
-              right: '-20px',
-              objectFit: 'cover',
-              objectPosition: 'bottom right',
-            }}
-          />
-        </div>
-      </section>
+  @media (min-width: 1024px) {
+    #home {
+      height: 600px !important; /* Desktop */
+       
+      background-position: 68% 10%; /* tweak framing */
+      background-size: 50%; /* ✅ maximum zoom-out for full body/elbows */
+    }
+  }
+`}</style>
+
+
+  {/* Gradients */}
+  <div className="absolute inset-0">
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          'radial-gradient(ellipse 900px 500px at 65% 25%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 80%)',
+        mixBlendMode: 'soft-light',
+      }}
+    ></div>
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          'linear-gradient(to right, rgba(74, 26, 92, 0.85) 0%, rgba(74, 26, 92, 0.5) 35%, rgba(74, 26, 92, 0.25) 60%, transparent 100%)',
+      }}
+    ></div>
+  </div>
+
+  {/* Text */}
+  <div className="relative h-full flex items-center justify-center lg:justify-start">
+    <div className="px-4 sm:px-8 lg:pl-24 xl:pl-32 w-full lg:w-1/2">
+      <div className="space-y-4 sm:space-y-6 text-white text-left ml-[30px] sm:ml-[50px]">
+        <h1 className="hero-heading">About</h1>
+      </div>
+    </div>
+  </div>
+
+  <style>{`
+    .hero-heading {
+      font-weight: 700;
+      line-height: 1.1;
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 640px) {
+      .hero-heading { font-size: 48px; }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-heading { font-size: 96px; }
+    }
+  `}</style>
+</section>
+
 
       {/* News Section */}
       <section className="py-20" style={{ backgroundColor: '#F8F9FA' }}>

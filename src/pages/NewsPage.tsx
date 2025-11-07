@@ -5,7 +5,7 @@ import { Calendar, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
-
+import HeroImage from '../assets/NewsNatasha.png';
 import newsHeroImage from '../assets/news-hero-image.png';
 import blueShirtBannerPortrait from '../assets/6c247bc6e2b11a6aac572da6a4fe00f610739987.png';
 
@@ -107,29 +107,31 @@ export function NewsPage() {
 >
   {/* Responsive height */}
   <style>{`
+  /* === MOBILE DEFAULT === */
   #home {
-    height: 280px !important; /* Mobile */
-    background-image: url(${rightPortraitImage});
+    height: 190px !important; /* slightly taller for better proportion */
+    background-image: url(${HeroImage});
     background-repeat: no-repeat;
-    background-position: 70% 10%; /* adjust vertical framing */
-    background-size: 90%; /* ✅ zoomed OUT */
-    filter: brightness(1.1) saturate(1.05) contrast(1.05);
+    background-position: 68% 25%; /* ✅ move image slightly down so head visible */
+    background-size: 115%; /* ✅ zoomed OUT compared to 90% */
+    filter: brightness(1.25) saturate(1.15) contrast(1.1); /* ✅ better color pop on small screens */
   }
 
+  /* === TABLET === */
   @media (min-width: 640px) {
     #home {
-      height: 520px !important; /* Tablet */
+      height: 520px !important;
       background-position: 70% 35%;
-      background-size: 85%; /* ✅ zoomed out more */
+      background-size: 85%;
     }
   }
 
+  /* === DESKTOP === */
   @media (min-width: 1024px) {
     #home {
-      height: 600px !important; /* Desktop */
-       
-      background-position: 68% 10%; /* tweak framing */
-      background-size: 50%; /* ✅ maximum zoom-out for full body/elbows */
+      height: 500px !important;
+      background-position: 68% 30%;
+      background-size: 100%;
     }
   }
 `}</style>
@@ -158,7 +160,7 @@ export function NewsPage() {
   <div className="relative h-full flex items-center justify-center lg:justify-start">
     <div className="px-4 sm:px-8 lg:pl-24 xl:pl-32 w-full lg:w-1/2">
       <div className="space-y-4 sm:space-y-6 text-white text-left ml-[30px] sm:ml-[50px]">
-        <h1 className="hero-heading">About</h1>
+        <h1 className="hero-heading">News</h1>
       </div>
     </div>
   </div>

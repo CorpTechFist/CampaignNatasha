@@ -164,7 +164,7 @@ export function ContactPage() {
               </form>
 
               {/* Contact Volunteer Coordinator Button */}
-              <Button 
+              {/* <Button 
                 size="lg"
                 variant="outline"
                 className="mt-6 border border-purple-700 w-full"
@@ -189,7 +189,7 @@ export function ContactPage() {
                 }}
               >
                 Contact Volunteer Coordinator
-              </Button>
+              </Button> */}
             </Card>
 
             {/* Contact Info */}

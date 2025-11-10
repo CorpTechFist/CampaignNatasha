@@ -215,12 +215,12 @@ export function HomePage() {
       {/* About Section */}
       <section id="about" className="py-20" style={{backgroundColor: '#F8F9FA'}}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-gray-900">About Me</h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               I'm not a career politician. I'm a mom who's tired of seeing families like ours ignored.
             </p>
-          </div>
+          </div> */}
 
           <div className="space-y-12 mb-16">
             {/* My Promise */}

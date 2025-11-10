@@ -220,6 +220,57 @@ export function AboutPage() {
             </div>
           </div>
         </div>
+
+         {/* === Responsive Text Styles === */}
+        <style>{`
+          .hero-heading {
+            font-weight: 700;
+            line-height: 1.1;
+            font-size: 22px;
+            margin-top: 10px;
+          }
+
+          .hero-subtext {
+            font-size: 12px;
+            line-height: 1.3;
+            max-width: 240px;
+          }
+
+          .hero-button {
+            padding: 6px 12px;
+            font-size: 10px;
+          }
+
+          @media (min-width: 640px) {
+            .hero-heading {
+              font-size: 48px;
+            }
+            .hero-subtext {
+              font-size: 18px;
+              line-height: 1.4;
+              max-width: 480px;
+            }
+            .hero-button {
+              padding: 10px 18px;
+              font-size: 16px;
+            }
+          }
+
+          @media (min-width: 1024px) {
+            .hero-heading {
+              font-size: 90px;
+            }
+            .hero-subtext {
+              font-size: 26px;
+              line-height: 1.3;
+              max-width: 580px;
+            }
+            .hero-button {
+              padding: 14px 24px;
+              font-size: 18px;
+            }
+          }
+        `}</style>
       </section>
 
       {/* ✅ PRIORITIES SECTION */}
@@ -236,61 +287,71 @@ export function AboutPage() {
 
           {/* Featured Priorities */}
           <div className="space-y-12 mb-16">
-            {featuredPriorities.map((priority) => (
-              <Card
-                key={priority.id}
-                className="overflow-hidden hover:shadow-xl transition-shadow"
-              >
-                <div className="p-10">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0">
-                      <priority.icon
-                        className="h-16 w-16"
-                        style={{ color: priority.color }}
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h3 className="text-3xl text-gray-900">
-                          {priority.title}
-                        </h3>
-                        <Badge
-                          className="text-white"
-                          style={{ backgroundColor: priority.color }}
-                        >
-                          Priority
-                        </Badge>
-                      </div>
-                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                        {priority.description}
-                      </p>
-                      <div className="space-y-3">
-                        <h4 className="text-lg text-gray-900">
-                          Key Policy Goals:
-                        </h4>
-                        <ul className="space-y-2">
-                          {priority.policies.map((policy, index) => (
-                            <li
-                              key={index}
-                              className="flex items-start gap-3"
-                            >
-                              <div
-                                className="w-2 h-2 rounded-full mt-3 flex-shrink-0"
-                                style={{ backgroundColor: priority.color }}
-                              />
-                              <span className="text-gray-700 leading-relaxed">
-                                {policy}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
+  {featuredPriorities.map((priority) => (
+    <Card
+      key={priority.id}
+      className="overflow-hidden hover:shadow-xl transition-shadow"
+    >
+      <div className="p-6 sm:p-10">
+        <div
+          className="
+            flex flex-col sm:flex-row 
+            items-start sm:items-center 
+            gap-4 sm:gap-6
+          "
+        >
+          {/* ✅ Icon section */}
+          <div className="flex-shrink-0 self-start sm:self-center">
+            <priority.icon
+              className="h-12 w-12 sm:h-16 sm:w-16"
+              style={{ color: priority.color }}
+            />
           </div>
+
+          {/* ✅ Text content */}
+          <div className="flex-1">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+              <h3 className="text-2xl sm:text-3xl text-gray-900">
+                {priority.title}
+              </h3>
+              <Badge
+                className="text-white w-fit"
+                style={{ backgroundColor: priority.color }}
+              >
+                Priority
+              </Badge>
+            </div>
+
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 break-words">
+              {priority.description}
+            </p>
+
+            <div className="space-y-3">
+              <h4 className="text-lg text-gray-900">Key Policy Goals:</h4>
+              <ul className="space-y-2">
+                {priority.policies.map((policy, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3"
+                  >
+                    <div
+                      className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
+                      style={{ backgroundColor: priority.color }}
+                    />
+                    <span className="text-gray-700 leading-relaxed break-words">
+                      {policy}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Card>
+  ))}
+</div>
+
 
           {/* Other Priorities */}
           <div className="mb-16">

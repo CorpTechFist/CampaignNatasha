@@ -92,53 +92,72 @@ export function EndorsementPage() {
           {/* Endorsement Categories */}
           
           {/* Featured Endorsements */}
-        <div className="space-y-8">
+      <div className="space-y-8">
   {endorsements.map((endorsement) => (
     <Card
       key={endorsement.id}
-      className="overflow-hidden hover:shadow-lg transition-shadow"
+      className="overflow-hidden hover:shadow-lg transition-shadow rounded-xl border border-gray-200 bg-white"
     >
-      <div className="md:flex">
-        <div className="md:w-1/4">
+      <div className="flex flex-col md:flex-row">
+        {/* Image Section */}
+        <div className="w-full md:w-1/4">
           <ImageWithFallback
             src={endorsement.image}
             alt={endorsement.name}
-            className="w-full h-64 md:h-full object-cover"
+            className="w-full h-60 sm:h-64 md:h-full object-cover"
           />
         </div>
 
-        <div className="md:w-3/4 p-8">
-          <div className="flex items-start gap-4">
+        {/* Text Content */}
+        <div className="w-full md:w-3/4 p-6 sm:p-8 flex flex-col justify-center">
+          <div className="flex items-start gap-3 sm:gap-4">
             <Quote
-              className="h-8 w-8 flex-shrink-0 mt-1"
+              className="h-6 w-6 sm:h-8 sm:w-8 mt-1 flex-shrink-0"
               style={{ color: "#8B4FAF" }}
             />
 
             <div className="flex-1">
-              <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
-                "{endorsement.quote}"
+              {/* Quote */}
+              <blockquote className="text-gray-700 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6">
+                “{endorsement.quote}”
               </blockquote>
 
-              <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="text-lg text-gray-900">{endorsement.name}</h4>
-                  <p className="text-gray-600 capitalize">
+              {/* Info section */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
+                <div className="flex flex-col">
+                  <h4 className="text-lg font-semibold text-gray-900">
+                    {endorsement.name}
+                  </h4>
+                  <p className="text-sm sm:text-base text-gray-800 font-bold capitalize mt-1">
                     {endorsement.type}
                   </p>
+
+                  {/* 👇 Instagram link sits below type on mobile */}
+                  {endorsement.title && (
+                    <a
+                      href={endorsement.title}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors font-medium text-sm sm:hidden mt-2"
+                    >
+                      <FaInstagram size={18} />
+                      <span>View on Instagram</span>
+                    </a>
+                  )}
                 </div>
 
-                {/* 👇 Instagram icon link */}
-               {endorsement.title && (
-  <a
-    href={endorsement.title}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors font-medium"
-  >
-    <FaInstagram size={20} />
-    <span>View on Instagram</span>
-  </a>
-)}
+                {/* 👇 Desktop-only Instagram link (aligned right) */}
+                {endorsement.title && (
+                  <a
+                    href={endorsement.title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden sm:flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors font-medium text-sm sm:text-base"
+                  >
+                    <FaInstagram size={18} />
+                    <span>View on Instagram</span>
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -147,6 +166,7 @@ export function EndorsementPage() {
     </Card>
   ))}
 </div>
+
 
           {/* Call to Action */}
           <div className="mt-16 text-center">

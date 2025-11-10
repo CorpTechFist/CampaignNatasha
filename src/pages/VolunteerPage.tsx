@@ -287,7 +287,7 @@ export function VolunteerPage() {
                 }
               >
                 Sign Up to Volunteer
-                <ArrowRight className="ml-2 h-5 w-5" />
+               
               </Button>
               <Button 
                 size="lg"

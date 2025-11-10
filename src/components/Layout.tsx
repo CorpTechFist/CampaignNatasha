@@ -19,7 +19,7 @@ export function Layout({ children }: LayoutProps) {
     { name: 'About', href: '/about' },
     { name: 'News', href: '/news' },
     { name: 'Endorsements', href: '/endorsements' },
-    { name: 'Priorities', href: '/priorities' },
+    // { name: 'Priorities', href: '/priorities' },
     { name: 'Volunteer', href: '/volunteer' },
     { name: 'Shop', href: '/shop' },
     { name: 'Contact', href: '/contact' },

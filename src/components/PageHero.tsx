@@ -20,67 +20,57 @@ export function PageHero({
   const bgImage = backgroundImage || natassjaPortrait;
   
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden w-screen"
-      style={{
-        marginLeft: 'calc(-50vw + 50%)',
-        marginRight: 'calc(-50vw + 50%)',
-      }}
-    >
-      {/* ✅ Responsive height control */}
-      <style>{`
-        /* Default: Mobile */
-        #home {
-          height: 158px !important;
-        }
-    
-        /* Tablet and above (matches Tailwind sm breakpoint) */
-        @media (min-width: 640px) {
-          #home {
-            height: 560px !important;
-          }
-        }
-    
-        /* Optional: Extra large screens */
-        @media (min-width: 1280px) {
-          #home {
-            height: 560px !important;
-          }
-        }
-      `}</style>
-    
-      {/* === Background Image Layer === */}
-     {/* Full-width portrait image background */}
-    <div className="absolute inset-0">
-      {/* Desktop / Tablet version */}
-      <img
-        src={natassjaPortrait}
-        alt="Natassja Grossman - Candidate for Utah"
-        className="
-          hidden sm:block
-          w-3/4 h-full object-cover object-center
-        "
+     <section
+        id="home"
+        className="relative w-screen overflow-hidden"
         style={{
-          filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
-          objectPosition: 'center 0%',
+          marginLeft: 'calc(-50vw + 50%)',
+          marginRight: 'calc(-50vw + 50%)',
         }}
-      />
-    
-         {/* On mobile, show a smaller/cropped image */}
-         {/* Mobile version with uploaded image */}
-           <img
-             src={natassjamobile} // ✅ Path to your uploaded image (adjust if needed)
-             alt="Natassja Grossman - Candidate for Utah"
-             className="
-               block sm:hidden
-               w-full h-[160px] mt-4 object-cover object-top
-             "
-             style={{
-               filter: 'brightness(1.05) saturate(1.05)',
-               objectPosition: 'center top',
-             }}
-           />
+      >
+        {/* ✅ Responsive height control */}
+        <style>{`
+          /* Default: Mobile */
+          #home {
+            height: 160px !important;
+          }
+
+          /* Tablet and above */
+          @media (min-width: 640px) {
+            #home {
+              height: 400px !important;
+            }
+          }
+
+          /* Large and extra-large */
+          @media (min-width: 1024px) {
+            #home {
+              height: 600px !important;
+            }
+          }
+        `}</style>
+      {/* === Background Layer === */}
+           <div className="absolute inset-0">
+             {/* Desktop/Tablet Image */}
+             <img
+               src={natassjaPortrait}
+               alt="Natassja Grossman - Candidate for Utah"
+               className="hidden sm:block w-full h-full object-cover object-center"
+               style={{
+                 filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
+                 objectPosition: 'center top',
+               }}
+             />
+   
+             {/* Mobile Image */}
+             <img
+               src={natassjamobile}
+               alt="Natassja Grossman - Candidate for Utah"
+               className="block sm:hidden w-full h-full object-cover object-top"
+               style={{
+                 filter: 'brightness(1.05) saturate(1.05)',
+               }}
+             />
      
        {/* ✅ White + Purple Gradient Overlay */}
     <div className="absolute inset-0">
@@ -99,7 +89,7 @@ export function PageHero({
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to right, rgba(74, 26, 92, 0.8) 0%, rgba(74, 26, 92, 0.5) 35%, rgba(74, 26, 92, 0.25) 60%, transparent 100%)',
+            'linear-gradient(to right, rgba(74, 26, 92, 0.8) 0%, rgba(74, 26, 92, 0.57) 35%, rgba(74, 26, 92, 0.25) 60%, transparent 100%)',
         }}
       ></div>
     </div>

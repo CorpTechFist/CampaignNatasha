@@ -5,211 +5,182 @@ import { ChevronRight, Heart, Users, Shield } from 'lucide-react';
 import natassjaPortrait from '../assets/4f0454f2a5404a6aa4c97c82035a13ac0ecc285d.png';
 import natassjamobile from '../assets/heromobile.jpeg';
 
- 
 export function HomePage() {
   const navigate = useNavigate();
-  
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <>
-  {/* Hero Section - Full width image with overlaid text */}
-{/* Hero Section - Full width image with overlaid text */}
-<section
-  id="home"
-  className="relative overflow-hidden w-screen"
-  style={{
-    marginLeft: 'calc(-50vw + 50%)',
-    marginRight: 'calc(-50vw + 50%)',
-  }}
->
-  {/* ✅ Responsive height control */}
-  <style>{`
-    /* Default: Mobile */
-    #home {
-      height: 158px !important;
-    }
-
-    /* Tablet and above (matches Tailwind sm breakpoint) */
-    @media (min-width: 640px) {
-      #home {
-        height: 560px !important;
-      }
-    }
-
-    /* Optional: Extra large screens */
-    @media (min-width: 1280px) {
-      #home {
-        height: 560px !important;
-      }
-    }
-  `}</style>
-
-  {/* === Background Image Layer === */}
- {/* Full-width portrait image background */}
-<div className="absolute inset-0">
-  {/* Desktop / Tablet version */}
-  <img
-    src={natassjaPortrait}
-    alt="Natassja Grossman - Candidate for Utah"
-    className="
-      hidden sm:block
-      w-3/4 h-full object-cover object-center
-    "
-    style={{
-      filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
-      objectPosition: 'center 0%',
-    }}
-  />
-
-  {/* Mobile version with uploaded image */}
-  <img
-    src={natassjamobile} // ✅ Path to your uploaded image (adjust if needed)
-    alt="Natassja Grossman - Candidate for Utah"
-    className="
-      block sm:hidden
-      w-full h-[160px] mt-4 object-cover object-top
-    "
-    style={{
-      filter: 'brightness(1.05) saturate(1.05)',
-      objectPosition: 'center top',
-    }}
-  />
-
-{/* ✅ White + Purple Gradient Overlay */}
-    <div className="absolute inset-0">
-      {/* Soft white light blend */}
-      <div
-        className="absolute inset-0"
+      {/* === HERO SECTION === */}
+      <section
+        id="home"
+        className="relative w-screen overflow-hidden"
         style={{
-          background:
-            'radial-gradient(ellipse 900px 500px at 65% 25%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 40%, transparent 80%)',
-          mixBlendMode: 'soft-light',
+          marginLeft: 'calc(-50vw + 50%)',
+          marginRight: 'calc(-50vw + 50%)',
         }}
-      ></div>
+      >
+        {/* ✅ Responsive height control */}
+        <style>{`
+          /* Default: Mobile */
+          #home {
+            height: 160px !important;
+          }
 
-      {/* Smooth purple gradient overlay */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            'linear-gradient(to right, rgba(74, 26, 92, 0.8) 0%, rgba(74, 26, 92, 0.5) 35%, rgba(74, 26, 92, 0.25) 60%, transparent 100%)',
-        }}
-      ></div>
-    </div>
-  </div>
+          /* Tablet and above */
+          @media (min-width: 640px) {
+            #home {
+              height: 400px !important;
+            }
+          }
 
+          /* Large and extra-large */
+          @media (min-width: 1024px) {
+            #home {
+              height: 600px !important;
+            }
+          }
+        `}</style>
 
+        {/* === Background Layer === */}
+        <div className="absolute inset-0">
+          {/* Desktop/Tablet Image */}
+          <img
+            src={natassjaPortrait}
+            alt="Natassja Grossman - Candidate for Utah"
+            className="hidden sm:block w-full h-full object-cover object-center"
+            style={{
+              filter: 'brightness(1.15) saturate(1.1) contrast(1.05)',
+              objectPosition: 'center top',
+            }}
+          />
 
-  {/* === Text Content Layer === */}
-  <div className="relative h-full flex items-center justify-center lg:justify-start">
-    <div className="px-4 sm:px-8 lg:pl-24 xl:pl-32 max-w-none w-full lg:w-1/2">
-      <div className="space-y-4 sm:space-y-6 text-white text-left ml-[30px] sm:ml-[50px]">
-        <div className="space-y-3">
-          <h1 className="hero-heading">
-            A Voice for
-            <br />
-            <span style={{ color: 'rgb(74, 26, 92)' }}>Every Family</span>
-          </h1>
+          {/* Mobile Image */}
+          <img
+            src={natassjamobile}
+            alt="Natassja Grossman - Candidate for Utah"
+            className="block sm:hidden w-full h-full object-cover object-top"
+            style={{
+              filter: 'brightness(1.05) saturate(1.05)',
+            }}
+          />
 
-          <p className="hero-subtext">
-            Single mom, community organizer,<br />and fierce advocate
-            <br className="hidden sm:block" />
-            for equity, freedom, and opportunity in Utah.
-          </p>
+          {/* Gradient Overlays */}
+          <div className="absolute inset-0">
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'radial-gradient(ellipse 900px 500px at 65% 25%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, transparent 80%)',
+                mixBlendMode: 'soft-light',
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'linear-gradient(to right, rgba(74,26,92,0.85) 0%, rgba(74,26,92,0.5) 40%, transparent 100%)',
+              }}
+            />
+          </div>
         </div>
 
-        <div className="pt-2 sm:pt-4">
-          <Button
-            size="lg"
-            className="hero-button text-white shadow-lg"
-            style={{ backgroundColor: '#6B2E8C' }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = '#4A1A5C')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = '#6B2E8C')
-            }
-            onClick={() => scrollToSection('#about')}
-          >
-            Learn My Story
-            <ChevronRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-          </Button>
+        {/* === Text Overlay === */}
+        <div className="relative h-full flex items-center justify-center lg:justify-start">
+          <div className="px-4 sm:px-8 lg:pl-24 xl:pl-32 w-full lg:w-1/2">
+            <div className="space-y-4 sm:space-y-6 text-white text-left ml-[30px] sm:ml-[50px]">
+              <div className="space-y-3">
+                <h1 className="hero-heading">
+                  A Voice for
+                  <br />
+                  <span style={{ color: 'rgb(249,229,255)' }}>Every Family</span>
+                </h1>
+
+                <p className="hero-subtext">
+                  Single mom, community organizer,<br />and fierce advocate
+                  <br className="hidden sm:block" />
+                  for equity, freedom, and opportunity in Utah.
+                </p>
+              </div>
+
+              <div className="pt-2 sm:pt-4">
+                <Button
+                  size="lg"
+                  className="hero-button text-white shadow-lg"
+                  style={{ backgroundColor: '#6B2E8C' }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.backgroundColor = '#4A1A5C')
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.backgroundColor = '#6B2E8C')
+                  }
+                  onClick={() => scrollToSection('#about')}
+                >
+                  Learn My Story
+                  <ChevronRight className="ml-1 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  {/* === Responsive Text Styling === */}
-<style>{`
-  /* Default: Mobile */
- 
-  .hero-heading {
-    font-weight: 700;
-    line-height: 1.1;
-    font-size:20px;
-    margin-top:10px;
-  }
+        {/* === Responsive Text Styles === */}
+        <style>{`
+          .hero-heading {
+            font-weight: 700;
+            line-height: 1.1;
+            font-size: 22px;
+            margin-top: 10px;
+          }
 
-  .hero-subtext {
-    font-size: 12px;
-    line-height: 1.3;
-    max-width: 240px; /* control width for natural wrapping */
-    word-break: keep-all;
-  }
+          .hero-subtext {
+            font-size: 12px;
+            line-height: 1.3;
+            max-width: 240px;
+          }
 
-  .hero-button {
-    padding: 6px 12px;
-    font-size: 10px;
-    
-  }
+          .hero-button {
+            padding: 6px 12px;
+            font-size: 10px;
+          }
 
-  /* Tablet and above */
-  @media (min-width: 640px) {
-    .hero-heading {
-      font-size: 48px;
-    }
-    .hero-subtext {
-      font-size: 18px;
-      line-height: 1.4;
-      max-width: 480px;
-    }
-    .hero-button {
-      padding: 10px 18px;
-      font-size: 16px;
-    }
-  }
+          @media (min-width: 640px) {
+            .hero-heading {
+              font-size: 48px;
+            }
+            .hero-subtext {
+              font-size: 18px;
+              line-height: 1.4;
+              max-width: 480px;
+            }
+            .hero-button {
+              padding: 10px 18px;
+              font-size: 16px;
+            }
+          }
 
-  /* Large screens */
-  @media (min-width: 1024px) {
-    .hero-heading {
-      font-size: 100px;
-    }
-    .hero-subtext {
-      font-size: 28px;
-      line-height: 1.2;
-      max-width: 600px;
-    }
-    .hero-button {
-      padding: 14px 24px;
-      font-size: 18px;
-    }
-  }
+          @media (min-width: 1024px) {
+            .hero-heading {
+              font-size: 90px;
+            }
+            .hero-subtext {
+              font-size: 26px;
+              line-height: 1.3;
+              max-width: 580px;
+            }
+            .hero-button {
+              padding: 14px 24px;
+              font-size: 18px;
+            }
+          }
+        `}</style>
+      </section>
 
-  /* Extra large (optional fine-tune) */
-  @media (min-width: 1280px) {
-    .hero-heading {
-      font-size: 100px;
-    }
-  }
-`}</style>
-
-</section>
+      
 
 
       {/* About Section */}

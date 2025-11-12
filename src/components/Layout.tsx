@@ -254,7 +254,7 @@ export function Layout({ children }: LayoutProps) {
                 </li>
                 <li>
                   <a href="mailto:Info@natassjagrossman.com" className="hover:text-purple-800">
-                    Info@natassjagrossman.com
+                    nmgcampaign@gmail.com
                   </a>
                 </li>
                 <li>
@@ -283,7 +283,7 @@ export function Layout({ children }: LayoutProps) {
                 </a>
               </p>
             </div>
-            <p>Paid for by Friends of Natassja Grossman</p>
+          
           </div>
         </div>
       </footer>

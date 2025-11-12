@@ -199,7 +199,7 @@ export function ContactPage() {
                   <Mail className="h-6 w-6 mr-3" style={{color: '#6B2E8C'}} />
                   <h3 className="text-xl text-gray-900">Email</h3>
                 </div>
-                <a href="mailto:Info@natassjagrossman.com" className="text-gray-600 hover:text-purple-600 transition-colors">Info@natassjagrossman.com</a>
+                <a href="mailto:Info@natassjagrossman.com" className="text-gray-600 hover:text-purple-600 transition-colors">nmgcampaign@gmail.com</a>
                 <p className="text-sm text-gray-500 mt-2">We'll get back to you within 24 hours</p>
               </Card>
 
